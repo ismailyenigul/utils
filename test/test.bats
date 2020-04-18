@@ -3,7 +3,7 @@
 load test_helper
 
 @test "curl" {
-  run check_cmd "psql"
+  run check_cmd "curl"
   [ "$status" -eq 0 ]
 }
 
@@ -99,5 +99,24 @@ load test_helper
 }
 @test "bind9-host" {
 	run check_cmd "host"
+	[ "$status" -eq 0 ]
+}
+
+@test "pip" {
+	run check_cmd "pip"
+	[ "$status" -eq 0 ]
+}
+
+@test "cqlsh" {
+	run check_cmd "cqlsh"
+	[ "$status" -eq 0 ]
+}
+
+@test "ssh" {
+	run check_cmd "ssh"
+	[ "$status" -eq 0 ]
+}
+@test "hey" {
+	run check_cmd "hey"
 	[ "$status" -eq 0 ]
 }
